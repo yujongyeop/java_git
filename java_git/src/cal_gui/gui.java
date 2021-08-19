@@ -20,22 +20,22 @@ public class gui extends JFrame implements ActionListener {
 	JButton b7 = new JButton("7");
 	JButton b8 = new JButton("8");
 	JButton b9 = new JButton("9");
-	JButton bp = new JButton("£«");
+	JButton bp = new JButton("+");
 	JButton b4 = new JButton("4");
 	JButton b5 = new JButton("5");
 	JButton b6 = new JButton("6");
-	JButton bm = new JButton("£­");
+	JButton bm = new JButton("-");
 	JButton b1 = new JButton("1");
 	JButton b2 = new JButton("2");
 	JButton b3 = new JButton("3");
-	JButton bx = new JButton("¡¿");
+	JButton bx = new JButton("*");
 	JButton b0 = new JButton("0");
 	JButton bdot = new JButton(".");
-	JButton be = new JButton("£½");
-	JButton bd = new JButton("¡À");
+	JButton be = new JButton("=");
+	JButton bd = new JButton("/");
 	JButton bon = new JButton("on");
 	JButton boff = new JButton("off");
-	String[] operator = { "+", "£­", "¡¿", "¡À","£½" };
+	String[] operator = { "+", "-", "x", "/","=" };
 
 	gui() {
 		setTitle("Calculator");
@@ -102,16 +102,16 @@ public class gui extends JFrame implements ActionListener {
 		String[] arry = before.split(operator);
 		long result = 0;
 		switch (operator) {
-		case "£«":
+		case "+":
 			result = Integer.parseInt(arry[0]) + Integer.parseInt(arry[1]);
 			break;
-		case "£­":
+		case "-":
 			result = Integer.parseInt(arry[0]) - Integer.parseInt(arry[1]);
 			break;
-		case "¡¿":
+		case "*":
 			result = Integer.parseInt(arry[0]) * Integer.parseInt(arry[1]);
 			break;
-		case "¡À":
+		case "/":
 			result = Integer.parseInt(arry[0]) / Integer.parseInt(arry[1]);
 			break;
 		}
@@ -124,15 +124,15 @@ public class gui extends JFrame implements ActionListener {
 		JButton ebtn = (JButton) e.getSource();
 		if (Arrays.asList(operator).indexOf(ebtn.getText()) >= 0
 				&& Arrays.asList(operator).indexOf(ebtn.getText()) <= 4) {
-			if (tf.getText().contains("£«"))
-				tf.setText(calculate(tf.getText(), "£«"));
-			else if (tf.getText().contains("£­"))
-				tf.setText(calculate(tf.getText(), "£­"));
-			else if (tf.getText().contains("¡¿"))
-				tf.setText(calculate(tf.getText(), "¡¿"));
-			else if (tf.getText().contains("¡À"))
-				tf.setText(calculate(tf.getText(), "¡À"));
-			if (ebtn.getText() != "£½")
+			if (tf.getText().contains("ï¿½ï¿½"))
+				tf.setText(calculate(tf.getText(), "ï¿½ï¿½"));
+			else if (tf.getText().contains("ï¿½ï¿½"))
+				tf.setText(calculate(tf.getText(), "ï¿½ï¿½"));
+			else if (tf.getText().contains("ï¿½ï¿½"))
+				tf.setText(calculate(tf.getText(), "ï¿½ï¿½"));
+			else if (tf.getText().contains("ï¿½ï¿½"))
+				tf.setText(calculate(tf.getText(), "ï¿½ï¿½"));
+			if (ebtn.getText() != "ï¿½ï¿½")
 				tf.setText(tf.getText() + ebtn.getText());
 		} else
 			tf.setText(tf.getText() + ebtn.getText());
