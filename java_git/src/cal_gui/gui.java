@@ -124,15 +124,15 @@ public class gui extends JFrame implements ActionListener {
 		JButton ebtn = (JButton) e.getSource();
 		if (Arrays.asList(operator).indexOf(ebtn.getText()) >= 0
 				&& Arrays.asList(operator).indexOf(ebtn.getText()) <= 4) {
-			if (tf.getText().contains("��"))
-				tf.setText(calculate(tf.getText(), "��"));
-			else if (tf.getText().contains("��"))
-				tf.setText(calculate(tf.getText(), "��"));
-			else if (tf.getText().contains("��"))
-				tf.setText(calculate(tf.getText(), "��"));
-			else if (tf.getText().contains("��"))
-				tf.setText(calculate(tf.getText(), "��"));
-			if (ebtn.getText() != "��")
+			if (tf.getText().contains("+"))
+				tf.setText(calculate(tf.getText(), "+"));
+			else if (tf.getText().contains("-"))
+				tf.setText(calculate(tf.getText(), "-"));
+			else if (tf.getText().contains("*"))
+				tf.setText(calculate(tf.getText(), "*"));
+			else if (tf.getText().contains("/"))
+				tf.setText(calculate(tf.getText(), "/"));
+			if (ebtn.getText() != "=")
 				tf.setText(tf.getText() + ebtn.getText());
 		} else
 			tf.setText(tf.getText() + ebtn.getText());
