@@ -8,3 +8,7 @@ V1:
 +Add eventListener(Button)
 +:Change Encoding(UTF-8)
 *:Unstable Calculation
+
+V1:
++Change Calculation
+-Delete On/Off Button
